@@ -34,11 +34,3 @@ Instrucciones para ejecutar
 1. Clonar el repositorio.
 2. Abrir GestionInventario.sln en Microsoft Visual Studio.
 3. Ejecutar el proyecto.
-
-
-## Distribución del trabajo
-
-- Giancarlo Marte Peralta: Producto e inventario.
-- Jacqueline Moreta Rosario: Categorías y reportes.
-- Alexander Morillo Montero: Búsqueda y eliminación.
-- Juan Alexander Perez De Los Santos: Configuración de la clase ReporteInventario 
