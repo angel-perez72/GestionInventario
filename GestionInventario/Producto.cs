@@ -1,23 +1,53 @@
 ﻿public class Producto
 {
-    public string Codigo;
-    public string Nombre;
-    public decimal Precio;
-    public int Cantidad;
-    public Categoria CategoriaProducto;
+    private string codigo;
+    private string nombre;
+    private decimal precio;
+    private int cantidad;
+    private Categoria categoriaProducto;
+
+    public string Codigo
+    {
+        get { return codigo; }
+        set { codigo = value; }
+    }
+
+    public string Nombre
+    {
+        get { return nombre; }
+        set { nombre = value; }
+    }
+
+    public decimal Precio
+    {
+        get { return precio; }
+        set { precio = value; }
+    }
+
+    public int Cantidad
+    {
+        get { return cantidad; }
+        set { cantidad = value; }
+    }
+
+    public Categoria CategoriaProducto
+    {
+        get { return categoriaProducto; }
+        set { categoriaProducto = value; }
+    }
 
     public Producto(string codigo, string nombre, decimal precio, int cantidad, Categoria categoria)
     {
-        Codigo = codigo;
-        Nombre = nombre;
-        Precio = precio;
-        Cantidad = cantidad;
-        CategoriaProducto = categoria;
+        this.codigo = codigo;
+        this.nombre = nombre;
+        this.precio = precio;
+        this.cantidad = cantidad;
+        this.categoriaProducto = categoria;
     }
 
     public bool EstaAgotado()
     {
-        if (Cantidad == 0)
+        if (cantidad == 0)
         {
             return true;
         }
@@ -29,7 +59,7 @@
 
     public decimal ValorTotal()
     {
-        return Precio * Cantidad;
+        return precio * cantidad;
     }
 
     public void Mostrar()
@@ -45,7 +75,7 @@
             estado = "\tDisponible";
         }
 
-        Console.WriteLine(Codigo + "\t" + Nombre + "\t" + CategoriaProducto.Nombre + "\t" + Precio + "\t" + Cantidad + "\t" +
+        Console.WriteLine(codigo + "\t" + nombre + "\t" + categoriaProducto.Nombre + "\t" + precio + "\t" + cantidad + "\t" +
         estado);
 
     }

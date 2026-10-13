@@ -1,11 +1,22 @@
 ﻿public class Categoria
 {
-    public int Id;
-    public string Nombre;
+    private int id;
+    private string nombre;
+    public int Id
+    {
+        get { return id; }
+        set { id = value; }
+    }
+
+    public string Nombre
+    {
+        get { return nombre; }
+        set { nombre = value; }
+    }
 
     public Categoria(int id, string nombre)
     {
-        Id = id;
-        Nombre = nombre;
+        this.id = id;
+        this.nombre = nombre;
     }
 }
